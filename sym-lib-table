@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name GeigerVFD)(type Legacy)(uri ${KIPRJMOD}/GeigerVFD.lib)(options "")(descr ""))
+)
