@@ -1,1 +1,5 @@
 https://datasheets.maximintegrated.com/en/ds/MAX6922-MAX6934.pdf
+
+http://www.ti.com/lit/ds/symlink/lm2577.pdf
+
+http://www.kerrywong.com/2013/06/05/vfd-filament-driver-using-555/
