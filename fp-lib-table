@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name GeigerVFD)(type KiCad)(uri ${KIPRJMOD}/GeigerVFD.pretty)(options "")(descr ""))
+  (lib (name PiGI-V1.1)(type KiCad)(uri ${KIPRJMOD}/PiGI-V1.1.pretty)(options "")(descr ""))
 )
