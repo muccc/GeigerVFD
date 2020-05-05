@@ -1735,4 +1735,15 @@ F 3 "" H 1550 6850 50  0001 C CNN
 	1    1750 6650
 	1    0    0    -1  
 $EndComp
+$Comp
+L Motor:Fan M1
+U 1 1 5EBECAAE
+P 600 6250
+F 0 "M1" H 758 6346 50  0000 L CNN
+F 1 "Fan" H 758 6255 50  0000 L CNN
+F 2 "" H 600 6260 50  0001 C CNN
+F 3 "~" H 600 6260 50  0001 C CNN
+	1    600  6250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
