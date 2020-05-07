@@ -49,17 +49,6 @@ $EndComp
 Wire Wire Line
 	2600 6750 2600 6850
 $Comp
-L power:VDD #PWR014
-U 1 1 5E7CB6AE
-P 9000 4150
-F 0 "#PWR014" H 9000 4000 50  0001 C CNN
-F 1 "VDD" H 9017 4323 50  0000 C CNN
-F 2 "" H 9000 4150 50  0001 C CNN
-F 3 "" H 9000 4150 50  0001 C CNN
-	1    9000 4150
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R18
 U 1 1 5E7CD624
 P 2700 3800
@@ -166,18 +155,14 @@ Text GLabel 4350 3650 2    50   Input ~ 0
 Fil1
 Text GLabel 4350 4050 2    50   Input ~ 0
 Fil2
-Wire Wire Line
-	10900 4350 11000 4350
-Wire Wire Line
-	10700 4350 10800 4350
-Text GLabel 10900 4200 1    50   Input ~ 0
+Text GLabel 10950 4200 1    50   Input ~ 0
 Fil1
 Text GLabel 10700 4200 1    50   Input ~ 0
 Fil2
 Wire Wire Line
 	10700 4200 10700 4350
 Wire Wire Line
-	10900 4200 10900 4350
+	10950 4200 10950 4350
 $Comp
 L Connector:Conn_01x01_Male J2
 U 1 1 5E8175F5
@@ -934,7 +919,7 @@ Wire Wire Line
 Wire Wire Line
 	7900 4300 7900 4900
 Connection ~ 7900 4900
-Text GLabel 9100 4250 2    50   Input ~ 0
+Text GLabel 9000 4150 1    50   Input ~ 0
 Vdd
 Wire Wire Line
 	2250 6550 2200 6550
@@ -968,7 +953,7 @@ Wire Wire Line
 Connection ~ 3000 6050
 Wire Wire Line
 	3000 6050 3000 6000
-Text GLabel 3000 6000 1    50   Input ~ 0
+Text GLabel 3100 6050 2    50   Input ~ 0
 Vdd
 Connection ~ 2600 6050
 Wire Wire Line
@@ -1423,8 +1408,6 @@ F 3 "" H 900 2100 50  0001 C CNN
 	1    900  2100
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1250 2400 1600 2400
 Connection ~ 1250 2400
 Connection ~ 1250 1200
 Wire Wire Line
@@ -1637,8 +1620,6 @@ Wire Wire Line
 	6000 6750 5750 6750
 Wire Wire Line
 	6000 6100 6000 6750
-Connection ~ 10900 4350
-Connection ~ 10700 4350
 Wire Wire Line
 	9800 4800 10300 4800
 Wire Wire Line
@@ -1720,8 +1701,6 @@ $EndComp
 Wire Wire Line
 	8850 4250 9000 4250
 Wire Wire Line
-	9100 4250 9000 4250
-Wire Wire Line
 	8550 4250 8450 4250
 $Comp
 L Sensor:Nuclear-Radiation_Detector V1
@@ -1748,4 +1727,95 @@ Text GLabel 8650 800  2    50   Input ~ 0
 HV-
 Text Label 2700 1400 0    10   ~ 0
 GND
+NoConn ~ 8600 4800
+NoConn ~ 9800 6050
+NoConn ~ 9800 6000
+NoConn ~ 9800 5350
+NoConn ~ 9800 5400
+NoConn ~ 6000 4400
+NoConn ~ 6000 4500
+NoConn ~ 6000 4600
+NoConn ~ 6000 4700
+NoConn ~ 6000 4800
+NoConn ~ 6000 5000
+NoConn ~ 6000 5100
+NoConn ~ 6000 5400
+NoConn ~ 6000 5700
+NoConn ~ 6000 5800
+NoConn ~ 6000 5900
+NoConn ~ 6000 6000
+NoConn ~ 7600 6100
+NoConn ~ 7600 6000
+NoConn ~ 7600 5900
+NoConn ~ 7600 5800
+NoConn ~ 7600 5700
+NoConn ~ 7600 5600
+NoConn ~ 7600 5500
+NoConn ~ 7600 5200
+NoConn ~ 7600 4800
+NoConn ~ 7600 4700
+NoConn ~ 7600 4600
+NoConn ~ 7600 4500
+NoConn ~ 7600 4400
+NoConn ~ 3300 1600
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5ECDB55B
+P 4350 3650
+F 0 "#FLG0101" H 4350 3725 50  0001 C CNN
+F 1 "PWR_FLAG" H 4350 3823 50  0001 C CNN
+F 2 "" H 4350 3650 50  0001 C CNN
+F 3 "~" H 4350 3650 50  0001 C CNN
+	1    4350 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5ECDDB26
+P 4350 4050
+F 0 "#FLG0102" H 4350 4125 50  0001 C CNN
+F 1 "PWR_FLAG" H 4350 4223 50  0001 C CNN
+F 2 "" H 4350 4050 50  0001 C CNN
+F 3 "~" H 4350 4050 50  0001 C CNN
+	1    4350 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5ECDF707
+P 3000 6000
+F 0 "#FLG0103" H 3000 6075 50  0001 C CNN
+F 1 "PWR_FLAG" H 3000 6173 50  0001 C CNN
+F 2 "" H 3000 6000 50  0001 C CNN
+F 3 "~" H 3000 6000 50  0001 C CNN
+	1    3000 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 6050 3000 6050
+$Comp
+L power:PWR_FLAG #FLG0104
+U 1 1 5ECEBF4B
+P 1950 1200
+F 0 "#FLG0104" H 1950 1275 50  0001 C CNN
+F 1 "PWR_FLAG" V 1950 1328 50  0001 L CNN
+F 2 "" H 1950 1200 50  0001 C CNN
+F 3 "~" H 1950 1200 50  0001 C CNN
+	1    1950 1200
+	1    0    0    -1  
+$EndComp
+Connection ~ 1950 1200
+$Comp
+L power:PWR_FLAG #FLG0105
+U 1 1 5ECEDB26
+P 1600 2400
+F 0 "#FLG0105" H 1600 2475 50  0001 C CNN
+F 1 "PWR_FLAG" H 1600 2573 50  0001 C CNN
+F 2 "" H 1600 2400 50  0001 C CNN
+F 3 "~" H 1600 2400 50  0001 C CNN
+	1    1600 2400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1250 2400 1600 2400
 $EndSCHEMATC
