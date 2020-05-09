@@ -10,3 +10,14 @@ GM-Tube:
 - Width: 11mm Tube, 6mm End
 
 Connector: 7x6.2 mm. Tabs: ~1.8mmx0.5mm
+
+
+Courtyard for C11: how big. reichelt says 2cm?
+
+Where: pins for 5v 3v gnd, etc
+
+thickness of traces. normal / power? (mil maybe?)
+
+Footprint (GND, R unification etc.)
+
+ERC errors?

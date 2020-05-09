@@ -134,10 +134,10 @@ F 3 "http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DAT
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Transformer_1P_SS T4
+L Device:Transformer_1P_SS TR1
 U 1 1 5E7DF007
 P 3950 3850
-F 0 "T4" H 3950 4231 50  0000 C CNN
+F 0 "TR1" H 3950 4231 50  0000 C CNN
 F 1 "Transformer_1P_SS" H 3950 4140 50  0000 C CNN
 F 2 "Transformer_THT:Transformer_Toroid_Tapped_Horizontal_D14.0mm_Amidon-T50" H 3950 3850 50  0001 C CNN
 F 3 "~" H 3950 3850 50  0001 C CNN
@@ -229,52 +229,6 @@ F 3 "" H 900 900 50  0001 C CNN
 	1    900  900 
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9800 4500 10300 4500
-Wire Wire Line
-	10300 4550 9800 4550
-Wire Wire Line
-	9800 4600 10300 4600
-Wire Wire Line
-	10300 4650 9800 4650
-Wire Wire Line
-	9800 4700 10300 4700
-Wire Wire Line
-	10300 4750 9800 4750
-Wire Wire Line
-	10300 4850 9800 4850
-Wire Wire Line
-	9800 4900 10300 4900
-Wire Wire Line
-	10300 4950 9800 4950
-Wire Wire Line
-	10300 5050 9800 5050
-Wire Wire Line
-	9800 5100 10300 5100
-Wire Wire Line
-	10300 5150 9800 5150
-Wire Wire Line
-	10300 5250 9800 5250
-Wire Wire Line
-	10300 5450 9800 5450
-Wire Wire Line
-	9800 5500 10300 5500
-Wire Wire Line
-	10300 5550 9800 5550
-Wire Wire Line
-	9800 5600 10300 5600
-Wire Wire Line
-	10300 5650 9800 5650
-Wire Wire Line
-	10300 5700 9800 5700
-Wire Wire Line
-	9800 5750 10300 5750
-Wire Wire Line
-	9800 5850 10300 5850
-Wire Wire Line
-	10300 5900 9800 5900
-Wire Wire Line
-	10300 5950 9800 5950
 $Comp
 L power:+5V #PWR016
 U 1 1 5E96C9C4
@@ -289,23 +243,23 @@ $EndComp
 $Comp
 L Device:LED D8
 U 1 1 5E971E34
-P 5250 5700
-F 0 "D8" V 5289 5583 50  0000 R CNN
-F 1 "red" V 5198 5583 50  0000 R CNN
-F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5250 5700 50  0001 C CNN
-F 3 "~" H 5250 5700 50  0001 C CNN
-	1    5250 5700
+P 8150 5700
+F 0 "D8" V 8189 5583 50  0000 R CNN
+F 1 "red" V 8098 5583 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8150 5700 50  0001 C CNN
+F 3 "~" H 8150 5700 50  0001 C CNN
+	1    8150 5700
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R R22
 U 1 1 5E971E3A
-P 5250 6000
-F 0 "R22" H 5320 6046 50  0000 L CNN
-F 1 "1k" H 5320 5955 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5180 6000 50  0001 C CNN
-F 3 "~" H 5250 6000 50  0001 C CNN
-	1    5250 6000
+P 8150 6000
+F 0 "R22" H 8220 6046 50  0000 L CNN
+F 1 "1k" H 8220 5955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8080 6000 50  0001 C CNN
+F 3 "~" H 8150 6000 50  0001 C CNN
+	1    8150 6000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -913,10 +867,6 @@ Connection ~ 2300 3350
 Wire Wire Line
 	1150 3700 1150 4600
 Wire Wire Line
-	6000 5500 5250 5500
-Wire Wire Line
-	5250 5500 5250 5550
-Wire Wire Line
 	7900 4300 7900 4900
 Connection ~ 7900 4900
 Text GLabel 9000 4150 1    50   Input ~ 0
@@ -1212,23 +1162,23 @@ $EndComp
 $Comp
 L PiGI-V1.1-eagle-import:GND #GND017
 U 1 1 5F7687B5
-P 5250 6300
-F 0 "#GND017" H 5250 6300 50  0001 C CNN
-F 1 "GND" H 5150 6200 59  0000 L BNN
-F 2 "" H 5250 6300 50  0001 C CNN
-F 3 "" H 5250 6300 50  0001 C CNN
-	1    5250 6300
+P 8150 6300
+F 0 "#GND017" H 8150 6300 50  0001 C CNN
+F 1 "GND" H 8050 6200 59  0000 L BNN
+F 2 "" H 8150 6300 50  0001 C CNN
+F 3 "" H 8150 6300 50  0001 C CNN
+	1    8150 6300
 	1    0    0    -1  
 $EndComp
 $Comp
 L PiGI-V1.1-eagle-import:GND #GND018
 U 1 1 5F768B74
-P 5650 6300
-F 0 "#GND018" H 5650 6300 50  0001 C CNN
-F 1 "GND" H 5550 6200 59  0000 L BNN
-F 2 "" H 5650 6300 50  0001 C CNN
-F 3 "" H 5650 6300 50  0001 C CNN
-	1    5650 6300
+P 5650 5900
+F 0 "#GND018" H 5650 5900 50  0001 C CNN
+F 1 "GND" H 5550 5800 59  0000 L BNN
+F 2 "" H 5650 5900 50  0001 C CNN
+F 3 "" H 5650 5900 50  0001 C CNN
+	1    5650 5900
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1434,9 +1384,7 @@ Wire Wire Line
 Wire Wire Line
 	6000 5200 5250 5200
 Wire Wire Line
-	5250 6150 5250 6200
-Wire Wire Line
-	5650 5600 5650 6200
+	8150 6150 8150 6200
 Wire Wire Line
 	5650 5600 6000 5600
 $Comp
@@ -1620,23 +1568,6 @@ Wire Wire Line
 	6000 6750 5750 6750
 Wire Wire Line
 	6000 6100 6000 6750
-Wire Wire Line
-	9800 4800 10300 4800
-Wire Wire Line
-	9800 5300 10300 5300
-Wire Wire Line
-	9800 5200 10300 5200
-$Comp
-L GeigerVFD:FV651G U4
-U 1 1 5E775719
-P 10750 5250
-F 0 "U4" H 10700 5300 50  0000 L CNN
-F 1 "FV651G" H 10600 5150 50  0000 L CNN
-F 2 "GeigerVFD:FV651G" H 10850 5200 50  0001 C CNN
-F 3 "" H 10850 5200 50  0001 C CNN
-	1    10750 5250
-	1    0    0    -1  
-$EndComp
 $Comp
 L GeigerVFD:LM2577 U1
 U 1 1 5E7BA0C1
@@ -1682,22 +1613,7 @@ Connection ~ 9000 4250
 Wire Wire Line
 	9000 4250 9000 4350
 Wire Wire Line
-	10300 5800 9800 5800
-Wire Wire Line
 	7600 5400 8500 5400
-Wire Wire Line
-	9800 5000 10300 5000
-$Comp
-L GeigerVFD:MAX6934 U3
-U 1 1 5E770987
-P 9250 5250
-F 0 "U3" H 9200 5300 50  0000 C CNN
-F 1 "MAX6934" H 9200 5150 50  0000 C CNN
-F 2 "Package_LCC:PLCC-44_THT-Socket" H 9100 5200 50  0001 C CNN
-F 3 "" H 9100 5200 50  0001 C CNN
-	1    9250 5250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8850 4250 9000 4250
 Wire Wire Line
@@ -1728,10 +1644,6 @@ HV-
 Text Label 2700 1400 0    10   ~ 0
 GND
 NoConn ~ 8600 4800
-NoConn ~ 9800 6050
-NoConn ~ 9800 6000
-NoConn ~ 9800 5350
-NoConn ~ 9800 5400
 NoConn ~ 6000 4400
 NoConn ~ 6000 4500
 NoConn ~ 6000 4600
@@ -1739,8 +1651,6 @@ NoConn ~ 6000 4700
 NoConn ~ 6000 4800
 NoConn ~ 6000 5000
 NoConn ~ 6000 5100
-NoConn ~ 6000 5400
-NoConn ~ 6000 5700
 NoConn ~ 6000 5800
 NoConn ~ 6000 5900
 NoConn ~ 6000 6000
@@ -1750,7 +1660,6 @@ NoConn ~ 7600 5900
 NoConn ~ 7600 5800
 NoConn ~ 7600 5700
 NoConn ~ 7600 5600
-NoConn ~ 7600 5500
 NoConn ~ 7600 5200
 NoConn ~ 7600 4800
 NoConn ~ 7600 4700
@@ -1818,4 +1727,348 @@ F 3 "~" H 1600 2400 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1250 2400 1600 2400
+$Comp
+L Device:Rotary_Encoder_Switch SW1
+U 1 1 5EB68F89
+P 5000 5700
+F 0 "SW1" H 5000 6067 50  0000 C CNN
+F 1 "Rotary_Encoder_Switch" H 5000 5976 50  0000 C CNN
+F 2 "Rotary_Encoder:RotaryEncoder_Alps_EC12E-Switch_Vertical_H20mm" H 4850 5860 50  0001 C CNN
+F 3 "~" H 5000 5960 50  0001 C CNN
+	1    5000 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 5700 4700 5700
+$Comp
+L PiGI-V1.1-eagle-import:GND #GND0101
+U 1 1 5EB7A4F9
+P 4550 5800
+F 0 "#GND0101" H 4550 5800 50  0001 C CNN
+F 1 "GND" H 4450 5700 59  0000 L BNN
+F 2 "" H 4550 5800 50  0001 C CNN
+F 3 "" H 4550 5800 50  0001 C CNN
+	1    4550 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 5500 8150 5500
+Wire Wire Line
+	8150 5500 8150 5550
+Wire Wire Line
+	6000 5500 5350 5500
+Wire Wire Line
+	6000 5400 4700 5400
+Wire Wire Line
+	4700 5400 4700 5600
+Wire Wire Line
+	6000 5700 5800 5700
+Wire Wire Line
+	5800 6150 4700 6150
+$Comp
+L PiGI-V1.1-eagle-import:GND #GND0102
+U 1 1 5EBCD435
+P 5350 5900
+F 0 "#GND0102" H 5350 5900 50  0001 C CNN
+F 1 "GND" H 5250 5800 59  0000 L BNN
+F 2 "" H 5350 5900 50  0001 C CNN
+F 3 "" H 5350 5900 50  0001 C CNN
+	1    5350 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 5700 5800 6150
+Wire Wire Line
+	4700 5800 4700 6150
+Wire Wire Line
+	5650 5600 5650 5800
+Wire Wire Line
+	5300 5800 5350 5800
+Wire Wire Line
+	5350 5500 5350 5600
+Wire Wire Line
+	5350 5600 5300 5600
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5EC29ABD
+P 3750 7150
+F 0 "H1" H 3850 7196 50  0000 L CNN
+F 1 "MountingHole" H 3850 7105 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 3750 7150 50  0001 C CNN
+F 3 "~" H 3750 7150 50  0001 C CNN
+	1    3750 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5EC38210
+P 3750 6950
+F 0 "H3" H 3850 6996 50  0000 L CNN
+F 1 "MountingHole" H 3850 6905 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 3750 6950 50  0001 C CNN
+F 3 "~" H 3750 6950 50  0001 C CNN
+	1    3750 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5EC384F6
+P 3750 6750
+F 0 "H2" H 3850 6796 50  0000 L CNN
+F 1 "MountingHole" H 3850 6705 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 3750 6750 50  0001 C CNN
+F 3 "~" H 3750 6750 50  0001 C CNN
+	1    3750 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GeigerVFD:FV651G U4
+U 1 1 5E775719
+P 10750 5250
+F 0 "U4" H 10700 5300 50  0000 L CNN
+F 1 "FV651G" H 10600 5150 50  0000 L CNN
+F 2 "GeigerVFD:FV651G" H 10850 5200 50  0001 C CNN
+F 3 "" H 10850 5200 50  0001 C CNN
+	1    10750 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GeigerVFD:MAX6934 U3
+U 1 1 5E770987
+P 9250 5250
+F 0 "U3" H 9200 5300 50  0000 C CNN
+F 1 "MAX6934" H 9200 5150 50  0000 C CNN
+F 2 "Package_LCC:PLCC-44_THT-Socket" H 9100 5200 50  0001 C CNN
+F 3 "" H 9100 5200 50  0001 C CNN
+	1    9250 5250
+	1    0    0    -1  
+$EndComp
+Text Label 9875 5100 0    20   ~ 0
+P16
+Text Label 10175 4500 0    20   ~ 0
+P17
+Wire Wire Line
+	10175 4500 10300 4500
+Text Label 10175 4550 0    20   ~ 0
+P16
+Wire Wire Line
+	10175 4550 10300 4550
+Text Label 10175 4600 0    20   ~ 0
+P15
+Wire Wire Line
+	10175 4600 10300 4600
+Text Label 10175 4650 0    20   ~ 0
+P14
+Wire Wire Line
+	10175 4650 10300 4650
+Text Label 10175 4700 0    20   ~ 0
+P13
+Wire Wire Line
+	10175 4700 10300 4700
+Text Label 10175 4750 0    20   ~ 0
+P12
+Wire Wire Line
+	10175 4750 10300 4750
+Text Label 10175 4800 0    20   ~ 0
+P11
+Wire Wire Line
+	10175 4800 10300 4800
+Text Label 10175 4850 0    20   ~ 0
+P10
+Wire Wire Line
+	10175 4850 10300 4850
+Text Label 10175 4900 0    20   ~ 0
+P09
+Wire Wire Line
+	10175 4900 10300 4900
+Text Label 10175 4950 0    20   ~ 0
+P08
+Wire Wire Line
+	10175 4950 10300 4950
+Text Label 10175 5000 0    20   ~ 0
+P07
+Wire Wire Line
+	10175 5000 10300 5000
+Text Label 10175 5050 0    20   ~ 0
+P06
+Wire Wire Line
+	10175 5050 10300 5050
+Text Label 10175 5100 0    20   ~ 0
+P05
+Wire Wire Line
+	10175 5100 10300 5100
+Text Label 10175 5150 0    20   ~ 0
+P04
+Wire Wire Line
+	10175 5150 10300 5150
+Text Label 10175 5200 0    20   ~ 0
+P03
+Wire Wire Line
+	10175 5200 10300 5200
+Text Label 10175 5250 0    20   ~ 0
+P02
+Wire Wire Line
+	10175 5250 10300 5250
+Text Label 10175 5300 0    20   ~ 0
+P01
+Wire Wire Line
+	9800 5100 9925 5100
+Wire Wire Line
+	10300 5300 10175 5300
+Text Label 9875 5050 0    20   ~ 0
+P17
+Wire Wire Line
+	9800 5050 9925 5050
+Text Label 9875 5000 0    20   ~ 0
+P14
+Wire Wire Line
+	9800 5000 9925 5000
+Text Label 9875 4950 0    20   ~ 0
+P15
+Wire Wire Line
+	9800 4950 9925 4950
+Text Label 9875 4900 0    20   ~ 0
+P12
+Wire Wire Line
+	9800 4900 9925 4900
+Text Label 9875 4850 0    20   ~ 0
+P13
+Wire Wire Line
+	9800 4850 9925 4850
+Text Label 9875 4800 0    20   ~ 0
+P10
+Wire Wire Line
+	9800 4800 9925 4800
+Text Label 9875 4750 0    20   ~ 0
+P11
+Wire Wire Line
+	9800 4750 9925 4750
+Text Label 9875 4700 0    20   ~ 0
+P08
+Wire Wire Line
+	9800 4700 9925 4700
+Text Label 9875 4650 0    20   ~ 0
+P09
+Wire Wire Line
+	9800 4650 9925 4650
+Text Label 9875 4600 0    20   ~ 0
+P06
+Wire Wire Line
+	9800 4600 9925 4600
+Text Label 9875 4550 0    20   ~ 0
+P07
+Wire Wire Line
+	9800 4550 9925 4550
+Text Label 9875 4500 0    20   ~ 0
+P05
+Wire Wire Line
+	9800 4500 9925 4500
+Text Label 9875 6050 0    20   ~ 0
+P04
+Wire Wire Line
+	9800 6050 9925 6050
+Text Label 9875 6000 0    20   ~ 0
+P03
+Wire Wire Line
+	9800 6000 9925 6000
+Text Label 9875 5950 0    20   ~ 0
+P02
+Wire Wire Line
+	9800 5950 9925 5950
+Text Label 9875 5900 0    20   ~ 0
+P01
+Wire Wire Line
+	9800 5900 9925 5900
+Text Label 9875 5850 0    20   ~ 0
+01G
+Wire Wire Line
+	9800 5850 9925 5850
+Text Label 9875 5800 0    20   ~ 0
+02G
+Wire Wire Line
+	9800 5800 9925 5800
+Text Label 9875 5750 0    20   ~ 0
+03G
+Wire Wire Line
+	9800 5750 9925 5750
+Text Label 9875 5700 0    20   ~ 0
+04G
+Wire Wire Line
+	9800 5700 9925 5700
+Text Label 9875 5650 0    20   ~ 0
+05G
+Wire Wire Line
+	9800 5650 9925 5650
+Text Label 9875 5600 0    20   ~ 0
+06G
+Wire Wire Line
+	9800 5600 9925 5600
+Text Label 9875 5550 0    20   ~ 0
+07G
+Wire Wire Line
+	9800 5550 9925 5550
+Text Label 9875 5500 0    20   ~ 0
+08G
+Wire Wire Line
+	9800 5500 9925 5500
+Text Label 9875 5450 0    20   ~ 0
+09G
+Wire Wire Line
+	9800 5450 9925 5450
+Text Label 9875 5400 0    20   ~ 0
+10G
+Wire Wire Line
+	9800 5400 9925 5400
+Text Label 9875 5350 0    20   ~ 0
+11G
+Wire Wire Line
+	9800 5350 9925 5350
+Text Label 10175 5950 0    20   ~ 0
+11G
+Wire Wire Line
+	10300 5950 10175 5950
+Text Label 10175 5900 0    20   ~ 0
+10G
+Wire Wire Line
+	10300 5900 10175 5900
+Text Label 10175 5850 0    20   ~ 0
+09G
+Wire Wire Line
+	10300 5850 10175 5850
+Text Label 10175 5800 0    20   ~ 0
+08G
+Wire Wire Line
+	10300 5800 10175 5800
+Text Label 10175 5750 0    20   ~ 0
+07G
+Wire Wire Line
+	10300 5750 10175 5750
+Text Label 10175 5700 0    20   ~ 0
+06G
+Wire Wire Line
+	10300 5700 10175 5700
+Text Label 10175 5650 0    20   ~ 0
+05G
+Wire Wire Line
+	10300 5650 10175 5650
+Text Label 10175 5600 0    20   ~ 0
+04G
+Wire Wire Line
+	10300 5600 10175 5600
+Text Label 10175 5550 0    20   ~ 0
+03G
+Wire Wire Line
+	10300 5550 10175 5550
+Text Label 10175 5500 0    20   ~ 0
+02G
+Wire Wire Line
+	10300 5500 10175 5500
+Text Label 10175 5450 0    20   ~ 0
+01G
+Wire Wire Line
+	10300 5450 10175 5450
+NoConn ~ 9800 5150
+NoConn ~ 9800 5200
+NoConn ~ 9800 5250
+NoConn ~ 9800 5300
 $EndSCHEMATC
