@@ -25,9 +25,12 @@ case_wall_side = 2;
 case_body_z = pcb_z+pcb_pad_top+pcb_pad_bottom;
 //case_cover_h=5;
 
+case_xl_oversize=3.5;
+case_xr_oversize=5;
+
 case_r=4.5;
 case_y_oversize = 25;
-case_cutout_dim=[pcb_x+2*pcb_fit,pcb_y+2*pcb_fit+case_y_oversize,case_body_z+2*eps];
+case_cutout_dim=[pcb_x+2*pcb_fit+case_xl_oversize+case_xr_oversize,pcb_y+2*pcb_fit+case_y_oversize,case_body_z+2*eps];
 case_body_dim=[case_cutout_dim[0]+2*case_wall_side,case_cutout_dim[1
 ]+2*case_wall_side,case_body_z];
 
@@ -35,7 +38,9 @@ case_offset = case_wall_side+pcb_fit;
 
 case_top_dim=[case_body_dim[0],case_body_dim[1],case_r];
 case_mount_d = 12;
-case_mount_bore=3;
+case_mount_bore=1.5;
+cover_mount_bore=2;
+
 case_mounts=[[0,0,+1.5,+1.5],
             [0,case_body_dim[1],1.5,-1.5],
             [case_body_dim[0],0,-1.5,1.5],
@@ -55,10 +60,10 @@ display_size=[107,22,23];
 display_pos=[1.3,92.38,-eps];
 
 encoder_pos=[56.39,39.62,-eps];
-encoder_bore=6;
+encoder_bore=8;
 
 module pcb(){
-    difference(){
+    translate([case_xl_oversize,0,0]) difference(){
         cube([pcb_x,pcb_y,pcb_z]);
         translate([0,0,-eps]) for (hole_pos=pcb_mount_holes)
             translate(hole_pos) cylinder(d=pcb_mount_hole_d, h=pcb_z+2*eps);
@@ -137,15 +142,20 @@ module mount_top(d,dx=0,dy=0,invert=false) {
                  cylinder(d=d,h=d);
             }
         }
-        translate([0,0,-eps]) cylinder(d=case_mount_bore,h=d+2*eps,$fn=16);
-        translate([0,0,d/2-case_mount_bore]) cylinder(d1=case_mount_bore,d2=case_mount_bore*2,h=case_mount_bore,$fn=16);
+        translate([0,0,-eps]) cylinder(d=cover_mount_bore,h=d+2*eps,$fn=16);
+        translate([0,0,d/2-case_mount_bore]) cylinder(d1=case_mount_bore,d2=cover_mount_bore*2,h=case_mount_bore,$fn=16);
     }
 }
 module cover(is_bottom=false){
     oz= is_bottom?-pcb_pad_bottom:pcb_pad_top+pcb_z;
     translate([-case_offset,-case_offset,oz]){
-        cube_cover(case_top_dim,invert=is_bottom);
-        for(mount = case_mounts)
+        difference(){
+            cube_cover(case_top_dim,invert=is_bottom);
+            
+            for(i=[4,5]) translate([case_mounts[i][0],case_mounts[i][1],-10])cylinder(d=cover_mount_bore,h=20);
+            
+        }
+            for(mount = case_mounts)
                 translate([mount[0],mount[1]]) mount_top(case_mount_d,mount[2],mount[3],invert=is_bottom);
     }
 }
@@ -162,27 +172,34 @@ module cover_top() {
             
             over =7.2;
             
-            translate([-over/2,-over/2,z_top-0.5]) translate(display_pos) cube_cover([display_size[0]+over,display_size[1]+over,4]);
+            //display
+            translate([case_xl_oversize,0,0])translate([-over/2,-over/2,z_top-0.5]) translate(display_pos) cube_cover([display_size[0]+over,display_size[1]+over,4]);
             
-            if(has_buzzer) translate([60,112,z_top]) cube_cover([30,20,3.5]);
-            translate([0,0,z_top]) translate(encoder_pos) ring(42,5);
-            translate([0,0,z_top]) translate(pcb_led_pos) ring(6,5);
+            //buzzer
+            if(has_buzzer) translate([case_xl_oversize,0,0]) translate([60,112,z_top]) cube_cover([30,20,3.5]);
+            
+            //encoder
+            translate([case_xl_oversize,0,0]) translate([0,0,z_top]) translate(encoder_pos) ring(42,5);
+            
+            //led
+            translate([case_xl_oversize,0,0]) translate([0,0,z_top]) translate(pcb_led_pos) ring(6,5);
         }
-        translate(display_pos) cube(display_size);
+        translate([case_xl_oversize,0,0]) translate(display_pos) cube(display_size);
             
         over2 = 1;
-        translate(display_pos) hull(){
+        //display
+        translate([case_xl_oversize,0,0]) translate(display_pos) hull(){
             translate([0,0,z_top]) cube([display_size[0],display_size[1],eps]);
             translate([-over2/2,-over2/2,z_top+3])cube([display_size[0]+over2,display_size[1]+over2,eps]);
         }
-        translate(encoder_pos) cylinder(d=encoder_bore,h=23);
-        translate([0,0,-eps]) for (mount=pcb_mount_holes) translate(mount) cylinder(d=pcb_mount_hole_d,h=case_r+2*eps+10,$fn=16);
+        translate([case_xl_oversize,0,0]) translate(encoder_pos) cylinder(d=encoder_bore,h=23);
+        translate([case_xl_oversize,0,0]) translate([0,0,-eps]) for (mount=pcb_mount_holes) translate(mount) cylinder(d=pcb_mount_hole_d,h=case_r+2*eps+10,$fn=16);
             
         translate([pcb_x/2,80,z_top]) linear_extrude(2)color("black") text("GEIGER VFD",halign="center", font="StalinistOne",size=9);
         
-        translate(pcb_led_pos) cylinder(d=6,h=case_r+2*eps+10,$fn=16);
+        translate([case_xl_oversize,0,0]) translate(pcb_led_pos) cylinder(d=6,h=case_r+2*eps+10,$fn=16);
     
-        if(has_buzzer) translate([60,111.5,z_top])
+        if(has_buzzer) translate([case_xl_oversize,0,0]) translate([60,111.5,z_top])
             for(i=[0:2]) {
                 translate([0,i*4+7,0]) 
                 hull() for(j=[0,1]) translate([j*20+5,0,0]) cylinder(d=2,h=10,$fn=16,center=true);
@@ -199,4 +216,4 @@ color("red") body();
 
 translate([0,0,explode])  cover_top();
 translate([0,0,-explode]) color("orange") cover_bottom();
-translate([encoder_pos[0],encoder_pos[1], pcb_pad_top+case_r+1*explode]) knob();
+translate([case_xl_oversize,0,0]) translate([encoder_pos[0],encoder_pos[1], pcb_pad_top+case_r+1*explode]) knob();

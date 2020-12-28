@@ -12,7 +12,7 @@ grab_offset=3;
 back_d=knob_d-10;
 back_h=knob_h-4;
 
-axis_h=20;
+axis_h=2;
 axis_d=6;
 axis_d_flat=5;
 axis_flat_offset=4;
@@ -52,14 +52,22 @@ module knob(){
     
     //axis
     
+    
     difference(){
         union(){
-            cylinder(d2=axis_d*2,d1=axis_d,h=back_h);
-            translate([0,0,-axis_h]) cylinder(d=axis_d,h=axis_h);
             for(az=[0,90]) rotate([0,0,az]) translate([0,0,back_h/2]) cube([back_d+eps,1,back_h],center=true);
+
+            translate([0,0,-axis_h+eps]) cylinder(d=axis_d+4,h=axis_h-eps);
+            cylinder(d2=axis_d*2+4,d1=axis_d+4,h=back_h);
+
         }
-        translate([axis_d_flat,0,-axis_h/2-axis_flat_offset]) cube([axis_d,axis_d,axis_h+eps],center=true);
-        #translate([0,0,-axis_h-eps]) cylinder(d=axis_d_i,h=axis_h+back_h+eps);
+        
+        difference(){
+            translate([0,0,-axis_h]) cylinder(d=axis_d,h=axis_h+knob_h);
+                
+            translate([axis_d_flat,0,-(axis_h)/2+(knob_h/2)]) cube([axis_d,axis_d,axis_h+knob_h+eps],center=true);
+            
+        }
     }
 }
 
