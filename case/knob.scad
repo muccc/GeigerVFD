@@ -12,7 +12,7 @@ grab_offset=3;
 back_d=knob_d-10;
 back_h=knob_h-4;
 
-axis_h=2;
+axis_h=0.1;
 axis_d=6;
 axis_d_flat=5;
 axis_flat_offset=4;
