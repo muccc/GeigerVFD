@@ -7,7 +7,7 @@ pcb_y = 117.35;
 pcb_z = 1.6;
 
 pcb_pad_top = 3;
-pcb_pad_bottom = 27;
+pcb_pad_bottom = 27+5;
 pcb_fit=1;
 
 pcb_mount_holes = [ [23.2,29.46],
@@ -52,7 +52,7 @@ case_mounts=[[0,0,+1.5,+1.5],
 explode = 0;
 
 usb_dim=[12,6];
-usb_pos = [1,28.42/2+2.03];
+usb_pos = [1,28.42/2+2.03+5];
 
 has_buzzer=true;
 
@@ -211,7 +211,7 @@ module cover_top() {
     }
 }
 
-color("green") pcb();
+//color("green") pcb();
 color("red") body();
 
 translate([0,0,explode])  cover_top();
